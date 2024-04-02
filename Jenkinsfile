@@ -2,6 +2,15 @@ pipeline {
     agent any
 
     stages {
+        
+        stage('pre clean up') {
+            steps {
+                sh 'docker compose down'
+            }
+        }
+            
+        
+        
         stage('git scm update') {
             steps {
                 git url: 'https://github.com/SEOKHYEONKIM0523/nodejs-app.git', 
