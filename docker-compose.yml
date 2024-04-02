@@ -35,7 +35,7 @@ services:
     image: seokhyeonk/webapp
     build: web
     ports:
-    - 3000:3000
+    - 3001:3001
     environment:
     #server.js에서 적은 DB_HOST를 여기서 가져옴
     - DB_HOST=db
