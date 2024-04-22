@@ -32,17 +32,15 @@ services:
     - pgadmin-data:/var/lib/pgadmin
 
   web:
-    image: seokhyeonk/webapp
+    image: "${IMAGE_NAME}"
     build: web
     ports:
-    - 3001:3001
+    - 3001:3000
     environment:
-    #server.js에서 적은 DB_HOST를 여기서 가져옴
     - DB_HOST=db
-    #db가 만들어지기 전까지는 기다리게해서 environment를 가져오지 않도록 함
+      IMAGE_NAME=seokhyeonk/webapp
     depends_on:
     - db
-
 
 volumes:
     pg-data:
