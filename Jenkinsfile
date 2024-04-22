@@ -19,8 +19,7 @@ pipeline {
         stage('docker hub push') {
             steps {
                 sh '''
-                docker login -u tjrgusdlrk101@gmail.com
-                tjrgus!@$141414
+                docker login -u seokhyeonk -p tjrgus!@$141414
                 docker push seokhyeonk/nodejsapp
                 
                 '''
