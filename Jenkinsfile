@@ -11,7 +11,7 @@ pipeline {
     
         stage('Docker build & deploy') {
             steps {
-                sh 'IMAGE_NAME=SEOKHYEONKIM0523/nodejs-app docker compose build'
+                sh 'IMAGE_NAME=seokhyeonk/nodejsapp docker compose build'
 
             }
         }
